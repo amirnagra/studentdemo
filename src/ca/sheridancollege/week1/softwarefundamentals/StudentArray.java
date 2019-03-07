@@ -5,28 +5,51 @@
  */
 package ca.sheridancollege.week1.softwarefundamentals;
 
+import java.util.Scanner;
+
 /**
  * A class to create an array of students and print their names
+ *
  * @author Ali Hassan, 2019
  */
-public class StudentArray 
-{
-    public static void main(String[] args)
-    {
-        StudentDemo [] studentList = new StudentDemo[4];
-        
-        System.out.println("hello world 12345");
-        StudentDemo student1 = new StudentDemo("1", "Jim Halpern");
-        studentList[0] = student1;
-        studentList[1] = new StudentDemo("2", "Michael Scott");
-        studentList[2] = new StudentDemo("3", "Pam Beasley");
-        studentList[3] = new StudentDemo("4", "abc Schrute");
+public class StudentArray {
 
+    public static void main(String[] args) {
+      
+//        StudentDemo student1 = new StudentDemo(100, "Jim Halpern");
+//        System.out.println(student1.getName()+ student1.getStudentID());
+//        System.out.println(student1.toString());
+//        
         
-        for(int i=0; i<studentList.length; i++)
-        {
-            System.out.println(studentList[i].getName());
-        }
+       StudentDemo [] students = new StudentDemo[3];
+//       students [0] = new StudentDemo(100, "Aamir");
+//       students [1] = new StudentDemo(101, "Aliiiii");
+//       students [2] = new StudentDemo(102, "zzzzzzzz");
+//       students [0].setName("Aamir Amin Nagra");
+//       
+//       //System.out.println(students[1]);
+//       
+//       for (int i=0; i<students.length; i++){
+//           //System.out.println(students[i].getName()+ students[i].getStudentID());
+//           System.out.println(students[i]);
+//       }
+       
+       Scanner input = new Scanner (System.in);
+       for (int i=0; i<students.length; i++){
+
+           System.out.println("Please enter the ID: ");
+            int id = input.nextInt();
+           
+           System.out.println("Enter the Name: ");
+           String name= input.next();
+           
+           students[i] = new StudentDemo(id, name);
+       }
+       
+       for (int j=0; j<students.length; j++){
+           System.out.println(students[j]);
+       }
+       
     }
-    
+
 }

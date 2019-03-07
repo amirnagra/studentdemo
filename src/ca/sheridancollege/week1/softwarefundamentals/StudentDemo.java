@@ -11,7 +11,7 @@ package ca.sheridancollege.week1.softwarefundamentals;
  */
 public class StudentDemo 
 {
-  private String studentID;
+  private int studentID;
   private String name;
   
   /**
@@ -19,7 +19,7 @@ public class StudentDemo
    * @param givenID - the ID to assign
    * @param givenName- the name to assign 
    */
-  public StudentDemo(String givenID, String givenName)
+  public StudentDemo(int givenID, String givenName)
   {
       studentID = givenID;
       name = givenName;
@@ -29,7 +29,7 @@ public class StudentDemo
    * A method to set the student ID
    * @param givenID the ID to set
    */
-  public void setStudentID(String givenID)
+  public void setStudentID(int givenID)
   {
       studentID=givenID;
   }
@@ -37,7 +37,7 @@ public class StudentDemo
    * An accessor method for studentID
    * @return the student's ID 
    */
-  public String getStudentID()
+  public int getStudentID()
   {
       return studentID;
   }
@@ -56,6 +56,13 @@ public class StudentDemo
      */
     public void setName(String givenName) {
         name = givenName;
+    }
+    
+    public String toString (){
+       return String.format("The name of student is: %s\nThe ID of student is %d\n", name,studentID);
+        
+        //return "Student name: "+name+" Student Id : "+studentID;
+       
     }
     
 }
