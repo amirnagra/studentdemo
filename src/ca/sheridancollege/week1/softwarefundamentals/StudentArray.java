@@ -15,6 +15,8 @@ import java.util.Scanner;
 public class StudentArray {
 
     public static void main(String[] args) {
+        
+        System.out.println("Hello World");
       
 //        StudentDemo student1 = new StudentDemo(100, "Jim Halpern");
 //        System.out.println(student1.getName()+ student1.getStudentID());
